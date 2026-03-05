@@ -1,6 +1,6 @@
-# Google Slides Skill for Cursor AI
+# Google Slides Skill for Cursor & Claude Code
 
-A comprehensive skill that teaches Cursor's AI agent how to create professional Google Slides presentations using the Google Slides API. Includes hard-won best practices for text sizing, layout math, overflow prevention, and speaker notes formatting.
+A skill that teaches AI agents (Cursor and Claude Code) how to create professional Google Slides presentations using the Google Slides API. Includes hard-won best practices for text sizing, layout math, overflow prevention, and speaker notes formatting.
 
 ## What's Included
 
@@ -20,53 +20,59 @@ A comprehensive skill that teaches Cursor's AI agent how to create professional 
 
 ## Installation
 
-### Option A: Personal skill (available across all your projects)
+### For Cursor
 
 ```bash
-# Clone into your personal Cursor skills directory
-mkdir -p ~/.cursor/skills
-cd ~/.cursor/skills
-git clone https://github.com/CheeYuTan/google-slides-skill.git google-slides
+# Personal skill (available across all your projects)
+git clone https://github.com/CheeYuTan/google-slides-skill.git ~/.cursor/skills/google-slides
 ```
 
-After cloning, your directory should look like:
-
-```
-~/.cursor/skills/
-└── google-slides/
-    ├── SKILL.md
-    └── resources/
-        └── gslides_builder.py
-```
-
-### Option B: Project skill (shared with your team via the repo)
+Or as a project skill (shared with your team via the repo):
 
 ```bash
-# From your project root
+cd your-project
 mkdir -p .cursor/skills
-cd .cursor/skills
-git clone https://github.com/CheeYuTan/google-slides-skill.git google-slides
+git clone https://github.com/CheeYuTan/google-slides-skill.git .cursor/skills/google-slides
 ```
 
-### Option C: Just copy the files
+### For Claude Code
 
 ```bash
-# Download SKILL.md directly
+# Personal skill (available across all your projects)
+git clone https://github.com/CheeYuTan/google-slides-skill.git ~/.claude/skills/google-slides
+```
+
+Or as a project skill:
+
+```bash
+cd your-project
+mkdir -p .claude/skills
+git clone https://github.com/CheeYuTan/google-slides-skill.git .claude/skills/google-slides
+```
+
+### Just copy the files
+
+```bash
+# For Cursor
 mkdir -p ~/.cursor/skills/google-slides/resources
 curl -o ~/.cursor/skills/google-slides/SKILL.md \
   https://raw.githubusercontent.com/CheeYuTan/google-slides-skill/main/SKILL.md
 curl -o ~/.cursor/skills/google-slides/resources/gslides_builder.py \
   https://raw.githubusercontent.com/CheeYuTan/google-slides-skill/main/resources/gslides_builder.py
+
+# For Claude Code
+mkdir -p ~/.claude/skills/google-slides/resources
+curl -o ~/.claude/skills/google-slides/SKILL.md \
+  https://raw.githubusercontent.com/CheeYuTan/google-slides-skill/main/SKILL.md
+curl -o ~/.claude/skills/google-slides/resources/gslides_builder.py \
+  https://raw.githubusercontent.com/CheeYuTan/google-slides-skill/main/resources/gslides_builder.py
 ```
 
 ## Verify Installation
 
-1. Open Cursor
-2. Start a new Agent chat (Cmd+I or Ctrl+I)
-3. Ask: *"Create a Google Slides presentation with 3 slides"*
-4. The agent should automatically pick up the skill and use the API patterns from `SKILL.md`
+**Cursor:** Open Cursor → Settings → Features → Agent Skills — the skill should appear in the list. Or start an Agent chat and ask *"Create a Google Slides presentation with 3 slides"*.
 
-You can also check that Cursor detects the skill by looking at the **Skills** section in Cursor Settings > Features > Agent Skills.
+**Claude Code:** Start a conversation and ask *"Create a Google Slides presentation"* — Claude will automatically pick up the skill from `~/.claude/skills/`.
 
 ## Prerequisites
 
