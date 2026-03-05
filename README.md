@@ -104,6 +104,14 @@ With this skill, the agent will:
 - Use proper padding inside cards (0.12" inset)
 - Shorten text to prevent wrapping in narrow cards
 
+## Databricks Corporate Template (Internal Only)
+
+This skill references the Databricks corporate slide template with 20+ professional layouts. The template is only accessible to Databricks employees:
+
+**Template:** https://docs.google.com/presentation/d/1p6-qcJw8sEcfVlsbLRKVDZAonCaYvcsBNhFxFU80Whk/edit
+
+Available layouts include: `title`, `content_basic`, `content_2col`, `content_3col`, `section_break_1`–`8`, `power_statement`, `closing`, industry-specific layouts (financial, healthcare, retail, etc.), and more. See `SKILL.md` for the full list.
+
 ## Contributing
 
 Found an issue or have an improvement? Open a PR or issue.
